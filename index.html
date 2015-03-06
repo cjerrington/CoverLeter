@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html ng-app="CoverLeter" ng-controller="Ctrl">
+
+<head>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<style>
+	#wrapper{
+		width:70%;
+		margin: 0 auto;
+	}
+	#box1{
+		width:30%;
+		float:left;
+		clear:both;
+		display:inline;
+		padding: 25px;
+	}
+	#box2{
+		width:40%;
+		float:left;
+		display:inline;
+		padding: 25px;
+	}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="box1">
+		<h3>Set up your information</h3>
+		First Name: <input type="text" ng-model="firstName" placeholder="Your First Name"><br>
+		Last Name: <input type="text" ng-model="lastName" placeholder="Your Last Name"><br>
+		Address line 1: <input type="text" ng-model="Address1" placeholder="123 Main"><br />
+		City: <input type="text" ng-model="city" placeholder="Houston">, State <input type="text" ng-model="state" placeholder="TX"><br />
+		Zip <input type="text" ng-model="zip" placeholder="77081"><br /><br />
+		Phone: <input type="text" ng-model="phone" class="phone" placeholder="123-456-7890">
+		Email: <input type="text" ng-model="email" placeholder="me@mydomain.com">
+		
+		<h3>Employer information</h3>
+		Company: <input type="text" ng-model="company" placeholder="Apple"><br />
+		Company Address: <input type="text" ng-model="CoAddress" placeholder="1 Infinite Loop"><br />
+		Company City: <input type="text" ng-model="CoCity" placeholder="Cupertino"><br />
+		Company State <input type="text" ng-model="CoState" placeholder="CA"><br />
+		Company Zip <input type="text" ng-model="CoZip" placeholder="95014"><br /><br />
+		HR or Person who sent the job request: <input type="text" ng-model="CoContact" placeholder="Steve Jobs"><br />
+		
+		<h3>Position Information</h3>
+		Title of position: <input type="text" ng-model="position" placeholder="Software developer"><br />
+		Hear of job from: <input type="text" ng-model="heardfrom" placeholder="A job posting on your website"><br />
+		<input type="text" ng-model="brief" placeholder="Developing, coordinating and implementing social media efforts"> Would come naturally<br />
+		Since I <input type="text" ng-model="sinceI" placeholder="enjoy finding new ways to provide the most current information to the end user and finding new ways to bring business and creating inbound traffic to specific content"><br />
+		
+	</div>
+	
+	<div id="box2">
+	<h3>The cover letter will automatically fill out with the information you provide</h3>
+		
+		<p>{{Address1}}<br />
+		{{city + ", " + state + " " + zip}}
+		</p>
+		<p>{{CoContact | capitalize}}<br />
+		{{CoAddress}}<br />
+		{{CoCity}}, {{CoState}} {{CoZip}}</p>
+		
+		<p>{{date | date:'MMMM dd, yyyy'}}</p>
+
+		<p>To {{CoContact | capitalize}},</p>
+
+		<p>
+		My name is {{firstName | capitalize}} {{lastName | capitalize}} and I recently graduated from Texas Tech University with a major in electronic media and communications. 
+		I learned about your {{position | capitalize}} position from {{heardfrom}}. 
+		After four years in Lubbock and attending Texas Tech, it has become my new home. 
+		{{brief}} would come naturally
+		since I {{sinceI}}. 
+		</p>
+		
+		<p>
+		I am currently working in the print media field and as a freelance web designer maintaining websites and social media; I understand the necessities of the job description. 
+		Online communication truly is the most effective way to reach out to individuals. Maintaining social media content and websites is essential in today,s technology based society. 
+		Because of my knowledge and experience in these areas I will be able to transition seamlessly into this position and hit the ground running for {{company}}.
+		<p>
+		
+		<p>
+		I know I can manage the responsibilities of the job description. 
+		Would it be possible to set up an interview with you to discuss further the {{position | capitalize}} position at {{company}}? 
+		You can contact me at {{phone}} or by email at {{email}}. I appreciate your time and consideration.
+		</p>
+		
+		<p>
+		Sincerely,<br>
+		{{firstName | capitalize}} {{lastName | capitalize}}<br />
+		{{phone}}<br />
+		{{email}}<br />
+		
+		</p>
+		
+	</div>
+</div>
+
+<script src="coverLeter.js"></script>
+<script src="app.js"></script>
+<script src="jquery.mask.js"></script>
+
+</body>
+</html>
