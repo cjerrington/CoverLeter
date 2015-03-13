@@ -1,3 +1,3 @@
 # CoverLetter
-AngularJS app to create a reume
+AngularJS app to create a cover letter
 
