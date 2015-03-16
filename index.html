@@ -7,21 +7,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <style>
 	#wrapper{
-		width:70%;
+		width:80%;
 		margin: 0 auto;
 	}
 	#box1{
-		width:30%;
+		width:40%;
 		float:left;
 		clear:both;
 		display:inline;
-		padding: 25px;
 	}
 	#box2{
 		width:40%;
 		float:left;
 		display:inline;
-		padding: 25px;
 	}
 </style>
 </head>
@@ -51,7 +49,7 @@
 		Hear of job from: <input type="text" ng-model="heardfrom" placeholder="A job posting on your website"><br />
 		<input type="text" ng-model="brief" placeholder="Developing, coordinating and implementing social media efforts"> Would come naturally<br />
 		Since I <input type="text" ng-model="sinceI" placeholder="enjoy finding new ways to provide the most current information to the end user and finding new ways to bring business and creating inbound traffic to specific content"><br />
-		
+		Sentence after job description: <input type="text" ng-model="afterjobdes" placeholder="Online communication truly is the most effective way to reach out to individuals. Maintaining social media content and websites is essential in today's technology based society."><br />
 	</div>
 	
 	<div id="box2">
@@ -77,8 +75,8 @@
 		</p>
 		
 		<p>
-		I am currently working in the print media field and as a freelance web designer maintaining websites and social media; I understand the necessities of the job description. 
-		Online communication truly is the most effective way to reach out to individuals. Maintaining social media content and websites is essential in today,s technology based society. 
+		I am currently working in the print media field, and as a freelance web designer maintaining websites and social media; I understand the necessities of the job description. 
+		{{ afterjobdes }}  
 		Because of my knowledge and experience in these areas I will be able to transition seamlessly into this position and hit the ground running for {{company}}.
 		<p>
 		
@@ -99,9 +97,9 @@
 	</div>
 </div>
 
+<script src="jquery.mask.js"></script>
 <script src="coverLeter.js"></script>
 <script src="app.js"></script>
-<script src="jquery.mask.js"></script>
 
 </body>
 </html>

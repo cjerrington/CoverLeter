@@ -24,5 +24,6 @@ function Ctrl($scope) {
 	$scope.position = "Software Developer",
 	$scope.heardfrom = "a job posting on your website",
 	$scope.brief = "Developing, coordinating and implementing social media efforts",
-	$scope.sinceI ="enjoy finding new ways to provide the most current information to the end user and finding new ways to bring business and creating inbound traffic to specific content"
+	$scope.sinceI ="enjoy finding new ways to provide the most current information to the end user and finding new ways to bring business and creating inbound traffic to specific content",
+	$scope.afterjobdes = "Online communication truly is the most effective way to reach out to individuals. Maintaining social media content and websites is essential in today's technology based society."
 }
