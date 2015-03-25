@@ -6,6 +6,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <style>
+	html,body{
+		font-size: 12px;
+		font-family: helvetica, arial, sans-serif;
+	}
 	#wrapper{
 		width:80%;
 		margin: 0 auto;
@@ -55,9 +59,14 @@
 	<div id="box2">
 	<h3>The cover letter will automatically fill out with the information you provide</h3>
 		
-		<p>{{Address1}}<br />
-		{{city + ", " + state + " " + zip}}
+		<div style="text-align:center">
+		<h2>{{firstName | capitalize}} {{lastName | capitalize}}</h2>
+		<p>
+			{{Address1}} {{city + ", " + state + " " + zip}}<br />
+			{{phone + " " + email}}
 		</p>
+		</div>
+
 		<p>{{CoContact | capitalize}}<br />
 		{{CoAddress}}<br />
 		{{CoCity}}, {{CoState}} {{CoZip}}</p>
@@ -69,14 +78,19 @@
 		<p>
 		My name is {{firstName | capitalize}} {{lastName | capitalize}} and I recently graduated from Texas Tech University with a major in electronic media and communications. 
 		I learned about your {{position | capitalize}} position from {{heardfrom}}. 
-		After four years in Lubbock and attending Texas Tech, it has become my new home. 
+		</p>
+
+		<p>After four years in Lubbock and attending Texas Tech, it has become my new home. 
 		{{brief}} would come naturally
 		since I {{sinceI}}. 
 		</p>
 		
 		<p>
-		I am currently working in the print media field, and as a freelance web designer maintaining websites and social media; I understand the necessities of the job description. 
-		{{ afterjobdes }}  
+		Currently working in the print media field, and as a freelance web designer maintaining websites and social media; I understand the necessities of the job description. 
+		{{ afterjobdes }} 
+		</p>
+
+		<p> 
 		Because of my knowledge and experience in these areas I will be able to transition seamlessly into this position and hit the ground running for {{company}}.
 		<p>
 		
